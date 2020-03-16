@@ -6,6 +6,7 @@ import enums.Book;
 public class SuperPassword {
 
 	// dummy dependency for class loading tests
+	// book is from JavaPractice project
 	public Book book = new Book();
 
 	@Generator
