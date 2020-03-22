@@ -8,14 +8,16 @@ public class Starter {
 
 	public static void main(String[] args) throws Exception {
 		Class<?> clazz = Class.forName("generics.GenericSimple");
+		System.out.println("Class name: " + clazz.getTypeName()); // Without generics
 		Method[] methods = clazz.getDeclaredMethods();
 		for (var method : methods) {
 			if (method.getName().equals("test")) {
 				// Class<?>[] parameters = method.getParameterTypes(); // non-generics
+				int count = 1;
 				Type[] parameters = method.getGenericParameterTypes(); // generics
 				for (var parameter : parameters) {
 					// System.out.println(parameter.getCanonicalName());
-					System.out.println(parameter);
+					System.out.println("Parameter" + count++ + ": " + parameter);
 				}
 				// Class<?> returnType = method.getReturnType();
 				Type returnType = method.getGenericReturnType();

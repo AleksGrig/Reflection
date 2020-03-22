@@ -3,9 +3,9 @@ package generics;
 import java.util.List;
 import java.util.Map;
 
-public class GenericSimple {
+public class GenericSimple<S, I> {
 
-	public List<String> test(String str, int i, Map<Integer, String> map) {
+	public List<S> test(S str, I i, Map<I, S> map) {
 		return null;
 	}
 }
